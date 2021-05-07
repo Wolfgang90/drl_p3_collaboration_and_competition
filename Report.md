@@ -16,13 +16,13 @@ DDPG algorithm is employed to solve the environment. The algorithm was customize
 
 #### Selected neural network architecture
 For actor:
-* Network input: state-size -> 24 x 1 vector
+* Network input: state-size -> 24 x 1 vector (24, as 3 frames of 8 are provided by the environment)
 * Number of nodes in first hidden fully-connected layer with ReLU applied: 256
 * Number of nodes in second hidden fully-connected layer with ReLU applied: 128
 * Number of nodes in output layer with tanh applied representing the potential actions: 2
 
 For critic:
-* Network input: state-size -> 24 x 1 vector
+* Network input: state-size -> 24 x 1 vector (24, as 3 frames of 8 are provided by the environment)
 * Number of nodes in first hidden fully-connected layer with leaky ReLU applied: 256
 * Number of nodes in second hidden fully-connected layer with leaky ReLU applied: 128
 * Number of nodes in output layer applied representing the potential actions: 2
